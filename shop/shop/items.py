@@ -9,7 +9,7 @@ import scrapy
 
 
 class ShopItem(scrapy.Item):
-    product_name = scrapy.Field()
-    product_price = scrapy.Field()
-    product_image = scrapy.Field()
+    product_name = scrapy.Field(default=u'')
+    product_price = scrapy.Field(default=u'')
+    product_image = scrapy.Field(default=u'')
     

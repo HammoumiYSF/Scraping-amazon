@@ -22,7 +22,8 @@ class Spider(scrapy.Spider):
 			product_name = product_name if product_name else None
 			product_image = product_image if product_image else None
 			product_price = product_price if product_price else None
-			item["product_name"] = product_name
-			item["product_price"] = product_price
-			item["product_image"] = product_image
+			item["product_name"] = product_name[1:-1]
+			item["product_price"] = product_price[1:-1]
+			item["product_image"] = product_image[1:-1]
+			#view the items
 			yield item
